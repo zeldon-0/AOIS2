@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AOIS2.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/AOIS2.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AOIS2.Core.dll": {}
+        }
+      },
+      "AOIS2.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/AOIS2.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AOIS2.Core.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AOIS2.Core/1.0.0": {
+      "type": "project",
+      "path": "../AOIS2.Core/AOIS2.Core.csproj",
+      "msbuildProject": "../AOIS2.Core/AOIS2.Core.csproj"
+    },
+    "AOIS2.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AOIS2.Core.Domain/AOIS2.Core.Domain.csproj",
+      "msbuildProject": "../AOIS2.Core.Domain/AOIS2.Core.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "AOIS2.Core >= 1.0.0",
+      "AOIS2.Core.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Vadym\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Data\\AOIS2.Data.csproj",
+      "projectName": "AOIS2.Data",
+      "projectPath": "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Data\\AOIS2.Data.csproj",
+      "packagesPath": "C:\\Users\\Vadym\\.nuget\\packages\\",
+      "outputPath": "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Data\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Vadym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Core.Domain\\AOIS2.Core.Domain.csproj": {
+              "projectPath": "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Core.Domain\\AOIS2.Core.Domain.csproj"
+            },
+            "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Core\\AOIS2.Core.csproj": {
+              "projectPath": "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Core\\AOIS2.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
