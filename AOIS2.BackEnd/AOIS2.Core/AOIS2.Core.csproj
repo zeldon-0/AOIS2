@@ -8,7 +8,10 @@
     <Folder Include="Mapping\" />
     <Folder Include="Extensions\" />
     <Folder Include="Services\" />
-    <Folder Include="Repositories\Contracts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AOIS2.Core.Domain\AOIS2.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>

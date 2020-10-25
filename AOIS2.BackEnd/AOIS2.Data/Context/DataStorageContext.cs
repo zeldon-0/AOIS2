@@ -12,10 +12,10 @@ namespace AOIS2.Data.Context
 {
     public class DataStorageContext : DbContext
     {
-        public IEnumerable<Radical> Radicals { get; set; }
-        public IEnumerable<KanjiWithReading> KanjisWithReading { get; set; }
-        public IEnumerable<KanjiWithWords> KanjisWithWords { get; set; }
-        public IEnumerable<KanjiWithReadingAndWords> KanjisWithReadingAndWords { get; set; }
+        public DbSet<Radical> Radicals { get; set; }
+        public DbSet<KanjiWithReading> KanjisWithReading { get; set; }
+        public DbSet<KanjiWithWords> KanjisWithWords { get; set; }
+        public DbSet<KanjiWithReadingAndWords> KanjisWithReadingAndWords { get; set; }
         public DataStorageContext(DbContextOptions<DataStorageContext> options)
             : base(options)
         {

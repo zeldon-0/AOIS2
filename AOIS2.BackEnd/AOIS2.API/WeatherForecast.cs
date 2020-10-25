@@ -1,6 +1,6 @@
 using System;
 
-namespace AOIS2
+namespace AOIS2.API
 {
     public class WeatherForecast
     {

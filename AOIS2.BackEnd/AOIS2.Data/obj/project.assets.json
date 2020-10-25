@@ -1499,6 +1499,9 @@
       "AOIS2.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AOIS2.Core.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/AOIS2.Core.dll": {}
         },

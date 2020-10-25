@@ -78,7 +78,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Core.Domain\\AOIS2.Core.Domain.csproj": {
+                "projectPath": "E:\\AOIS\\AOIS2\\AOIS2.BackEnd\\AOIS2.Core.Domain\\AOIS2.Core.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
