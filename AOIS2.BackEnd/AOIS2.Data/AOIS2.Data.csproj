@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Context\Configurations\" />
+    <Folder Include="DBSeeding\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AOIS2.Core.Domain\AOIS2.Core.Domain.csproj" />
+    <ProjectReference Include="..\AOIS2.Core\AOIS2.Core.csproj" />
+  </ItemGroup>
+
 </Project>

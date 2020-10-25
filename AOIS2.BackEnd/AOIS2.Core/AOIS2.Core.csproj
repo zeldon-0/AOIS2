@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Mapping\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Services\" />
     <Folder Include="Repositories\Contracts\" />
   </ItemGroup>
 
