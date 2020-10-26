@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AOIS2.Data.Migrations
 {
     [DbContext(typeof(DataStorageContext))]
-    [Migration("20201025210254_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20201026224019_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -79,6 +79,9 @@ namespace AOIS2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(1)")
                         .HasMaxLength(1);
+
+                    b.Property<string>("Reading")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

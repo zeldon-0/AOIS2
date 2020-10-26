@@ -14,7 +14,10 @@ namespace AOIS2.Data.Context.Configurations.Entities
             builder.HasKey(k => k.Id);
 
             builder.Property(k => k.Kanji)
-                .HasMaxLength(1)
+                .HasColumnType("nvarchar(4000)")
+                .IsRequired();
+            builder.Property(k => k.Reading)
+                .HasColumnType("nvarchar(4000)")
                 .IsRequired();
 
             builder.Property(r => r.JLPTLevel)

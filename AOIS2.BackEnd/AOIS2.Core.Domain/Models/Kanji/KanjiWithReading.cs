@@ -10,6 +10,7 @@ namespace AOIS2.Core.Domain.Models.Kanji
     {
         public int Id { get; set; }
         public string Kanji { get; set; }
+        public string Reading { get; set; }
         public int JLPTLevel { get; set; }
         public IEnumerable<KanjiWithReadingRadical> KanjiWithReadingRadicals { get; set; }
 

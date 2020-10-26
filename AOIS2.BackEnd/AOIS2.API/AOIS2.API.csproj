@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AOIS2.Core\AOIS2.Core.csproj" />
     <ProjectReference Include="..\AOIS2.Data\AOIS2.Data.csproj" />
   </ItemGroup>
 

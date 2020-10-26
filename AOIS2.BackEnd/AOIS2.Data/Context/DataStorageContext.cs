@@ -19,16 +19,17 @@ namespace AOIS2.Data.Context
         public DataStorageContext(DbContextOptions<DataStorageContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+            Database.Migrate();
         }
 
         public DataStorageContext() : base()
         {
-            Database.EnsureCreated();
+            Database.Migrate();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.UseCollation("Japanese_CI_AS_KS_WS");
 
             modelBuilder.ApplyConfiguration(new RadicalConfiguration());
             modelBuilder.ApplyConfiguration(new KanjiWithReadingConfiguration());

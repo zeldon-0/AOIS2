@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AOIS2.Core;
 using AOIS2.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,6 +28,7 @@ namespace AOIS2.API
         {
             services.AddControllers();
             services.AddData(Configuration);
+            services.AddCore();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -2,7 +2,7 @@
 
 namespace AOIS2.Data.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,6 +13,7 @@ namespace AOIS2.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Kanji = table.Column<string>(maxLength: 1, nullable: false),
+                    Reading = table.Column<string>(nullable: true),
                     JLPTLevel = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
