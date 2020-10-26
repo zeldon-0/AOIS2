@@ -9,5 +9,6 @@ namespace AOIS2.Core.Repositories.Contracts
     public interface IRadicalRepository
     {
         Task<IEnumerable<Radical>> GetAllRadicalsAsync();
+        Task<Radical> GetRadicalByIdAsync(int id);
     }
 }

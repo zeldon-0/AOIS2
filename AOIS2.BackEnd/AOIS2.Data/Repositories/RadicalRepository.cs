@@ -25,5 +25,16 @@ namespace AOIS2.Data.Repositories
 
             return radicals;
         }
+
+        public async  Task<Radical> GetRadicalByIdAsync(int id)
+        {
+            Radical radical =
+                await _context.Radicals
+                .Include(r => r.KanjiWithReadingAndWordsRadicals)
+                .Include(r => r.KanjiWithReadingRadicals)
+                .Include(r => r.KanjiWithWordsRadicals)
+                .FirstOrDefaultAsync(r => r.Id == id);
+            return radical;
+        }
     }
 }

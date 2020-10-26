@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOIS2.Core", "AOIS2.Core\AO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOIS2.Core.Domain", "AOIS2.Core.Domain\AOIS2.Core.Domain.csproj", "{889D985F-40E2-4B59-8892-3E98A6E14BBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOIS2.API", "AOIS2.API\AOIS2.API.csproj", "{8369BE14-93E6-4148-9BC4-2E9965503142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOIS2.API", "AOIS2.API\AOIS2.API.csproj", "{8369BE14-93E6-4148-9BC4-2E9965503142}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOIS2.API.Contracts", "AOIS2.API.Contracts\AOIS2.API.Contracts.csproj", "{64E76497-0626-48C7-8E3F-30DA9760C555}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8369BE14-93E6-4148-9BC4-2E9965503142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8369BE14-93E6-4148-9BC4-2E9965503142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8369BE14-93E6-4148-9BC4-2E9965503142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E76497-0626-48C7-8E3F-30DA9760C555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E76497-0626-48C7-8E3F-30DA9760C555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E76497-0626-48C7-8E3F-30DA9760C555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E76497-0626-48C7-8E3F-30DA9760C555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
