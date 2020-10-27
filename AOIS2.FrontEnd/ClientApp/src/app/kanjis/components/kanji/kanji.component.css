@@ -1,0 +1,81 @@
+#wrap{
+    margin-left: 150px;
+    max-width: 800px;
+    justify-self: center;
+}
+#content{
+    display: grid;
+    grid-template-areas: "kanji kanji"
+                         "strokes strokes-value"
+                         "reading reading-value"
+                         "words words-value"
+                         "radicals radicals-value";
+    grid-template-columns: repeat(2. 1fr);
+}
+.kanji{
+    grid-area: kanji;
+    font-size: 1000%;
+    text-align: center;
+}
+
+.strokes{
+    grid-area: strokes;
+    background-color: dimgray;
+    border: black;
+    border-radius: 10px;
+    font-size: 150%;
+    text-align: center;
+    color: ghostwhite;
+}
+.strokes-value{
+    grid-area: strokes-value;
+    font-size: 150%;
+    text-align: center;
+}
+.reading{
+    grid-area: reading;
+    font-size: 150%;
+    text-align: center;
+    background-color: dimgray;
+    border: black;
+    border-radius: 10px;
+    font-size: 150%;
+    text-align: center;
+    color: ghostwhite;
+}
+.reading-value{
+    grid-area: reading-value;
+    font-size: 150%;
+    text-align: center;
+}
+.words{
+    grid-area: words;
+    font-size: 150%;
+    text-align: center;
+    background-color: dimgray;
+    border: black;
+    border-radius: 10px;
+    font-size: 150%;
+    text-align: center;
+    color: ghostwhite;
+}
+.words-value{
+    grid-area: words-value;
+    font-size: 150%;
+    text-align: center;
+}
+.radicals{
+    grid-area: radicals;
+
+    background-color: dimgray;
+    border: black;
+    border-radius: 10px;
+    font-size: 150%;
+    text-align: center;
+    color: ghostwhite;
+}
+.radicals-value{
+    grid-area: radicals-value;
+    font-size: 150%;
+    text-align: center;;
+}

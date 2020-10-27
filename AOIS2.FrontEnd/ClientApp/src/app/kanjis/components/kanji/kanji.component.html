@@ -1,2 +1,8 @@
-<p *ngIf="kanji">{{kanji.kanji}}</p>
-<p *ngIf="!kanji">No kanji found for the request</p>
+<div id="wrap">
+<div id="content">
+    <p class = "kanji">{{kanji.kanji}}</p>
+    <div class = "strokes">Strokes</div> <div class = "strokes-value">{{kanji.strokes}}</div>
+    <div class = "reading">Reading</div> <div class = "reading-value">{{kanji.reading}}</div>
+    <div class = "radicals">Radicals</div> <div class = "radicals-value">{{getRadicals()}}</div>
+</div>
+</div>

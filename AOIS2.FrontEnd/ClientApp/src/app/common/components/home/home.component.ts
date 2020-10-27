@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
      }
   public radicals : Radical[];
   
-  public kanji : Kanji;
+  public kanjis: Kanji[];
   ngOnInit() {
     this.radicalService.getAllRadicals()
       .subscribe(radicals => {this.radicals = radicals});
@@ -32,8 +32,11 @@ export class HomeComponent implements OnInit {
 
   }
   search(){
-    this.kanji=null;
+    this.kanjis=null;
     this.searchService.searchForKanji(this.query)
-      .subscribe(kanjis => this.kanji = kanjis[0]);
+      .subscribe(kanjis => 
+        this.kanjis = kanjis
+    );
+    
   }
 }

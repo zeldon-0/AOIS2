@@ -5,4 +5,6 @@
     </ng-container>
 </div>
 <button (click)="search()"   class="button btn btn-secondary">Search</button>
-<app-kanji [kanji] = "kanji" class="radical"></app-kanji>
+<div  *ngFor = "let kanji of kanjis">
+    <app-kanji [kanji] = "kanji" class="radical"></app-kanji>
+</div>
