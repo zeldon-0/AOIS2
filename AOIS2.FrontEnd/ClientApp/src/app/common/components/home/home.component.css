@@ -1,0 +1,23 @@
+#wrap{
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+}
+
+.radical{
+    padding: 2px 1px 1px 1px;
+}
+.button{
+    font-size: larger;
+    align-content: center;
+    height: 30px;
+    min-width: 200px;
+    margin:10px auto; 
+    display:block;
+    grid-area:wrapper;
+    display: grid;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

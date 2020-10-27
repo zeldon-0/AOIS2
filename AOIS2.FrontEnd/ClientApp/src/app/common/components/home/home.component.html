@@ -1,0 +1,8 @@
+
+<div class="container" id="wrap">
+    <ng-container *ngFor = "let radical of radicals">
+        <app-radical [radical] = "radical" (radicalClicked)="onRadicalClicked($event)" class="radical"></app-radical>
+    </ng-container>
+</div>
+<button (click)="search()"   class="button btn btn-secondary">Search</button>
+<app-kanji [kanji] = "kanji" class="radical"></app-kanji>

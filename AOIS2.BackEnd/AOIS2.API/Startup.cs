@@ -26,6 +26,16 @@ namespace AOIS2.API
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowMyOrigin",
+                        builder =>
+                        {
+                            builder.AllowAnyOrigin();
+                            builder.AllowAnyHeader();
+                            builder.AllowAnyMethod();
+                        });
+            });
             services.AddControllers();
             services.AddData(Configuration);
             services.AddCore();
@@ -41,6 +51,8 @@ namespace AOIS2.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("AllowMyOrigin");
 
             app.UseAuthorization();
 

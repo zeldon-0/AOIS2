@@ -7,6 +7,7 @@ using AOIS2.Core.Domain.Models.SearchModels;
 using AOIS2.Core.Repositories.Contracts;
 using AOIS2.Core.Services.Contracts;
 using AutoMapper;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,14 +21,17 @@ namespace AOIS2.Core.Services
         private IKanjiRepository _kanjiRepository;
         private IRadicalRepository _radicalRepository;
         private IMapper _mapper;
+        private ILogger _logger;
 
         public SearchService(IKanjiRepository kanjiRepository,
             IRadicalRepository radicalRepository,
-            IMapper mapper)
+            IMapper mapper,
+            ILogger<KanjiSearchModel> logger)
         {
             _kanjiRepository = kanjiRepository;
             _radicalRepository = radicalRepository;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<KanjiResult>> KanjiSearch(SearchModel searchModel)
@@ -42,7 +46,8 @@ namespace AOIS2.Core.Services
                 radicals.Add(_mapper.Map<RadicalSearchModel>(radicalEntity));
                 
             }
-            for(int i = 0; i < kanjis.Count; i++)
+
+            for (int i = 0; i < kanjis.Count; i++)
             {
                 foreach(var radical in radicals)
                 {
@@ -62,7 +67,10 @@ namespace AOIS2.Core.Services
 
             kanjis = kanjis.Where(k => k.Probability != 0).ToList();
             kanjis = kanjis.OrderByDescending(k => k.Probability).ToList();
-            // Fetch kanjis again
+            foreach (var kanji in kanjis)
+            {
+                _logger.LogInformation($"{kanji.Id} probability: {kanji.Probability}");
+            }
             return kanjis.Select(k => _mapper.Map<KanjiResult>(k));
             
         }
@@ -75,22 +83,26 @@ namespace AOIS2.Core.Services
             IEnumerable<KanjiWithReadingAndWords> kanjisWithReadingAndWords =
                 await _kanjiRepository.GetAllKanjisWithReadingAndWordsAsync();
 
-            IEnumerable<KanjiSearchModel> kanjis = new List<KanjiSearchModel>();
-            kanjis.Concat(
+
+
+            List<KanjiSearchModel> kanjis = new List<KanjiSearchModel>() { new KanjiSearchModel()};
+            kanjis = kanjis.Concat(
                 kanjisWithReading.Select(
                     k => _mapper.Map<KanjiSearchModel>(k)
                 )
-            );
-            kanjis.Concat(
+            ).ToList();
+
+            kanjis = kanjis.Concat(
                 kanjisWithWords.Select(
                     k => _mapper.Map<KanjiSearchModel>(k)
-                )
-            );
-            kanjis.Concat(
+                ).ToList()
+            ).ToList();
+            
+            kanjis = kanjis.Concat(
                 kanjisWithReadingAndWords.Select(
                     k => _mapper.Map<KanjiSearchModel>(k)
-                )
-            );
+                ).ToList()
+            ).ToList();
             return kanjis;
         }
     }

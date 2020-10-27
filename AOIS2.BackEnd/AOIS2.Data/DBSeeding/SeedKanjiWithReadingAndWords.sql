@@ -1,6 +1,6 @@
 ﻿INSERT INTO [KanjisWithReadingAndWords]
 (Kanji, Reading, Strokes, Words) VALUES
-('線', 'せｎ', 15, '線分'),
+('線', 'せん', 15, '線分'),
 ('曲', 'ま', 6, '曲がる'),
 ('同', 'おな', 6, '同様'),
 ('違', 'ちが', 13, '違う'),

@@ -1519,7 +1519,9 @@
           "AOIS2.API.Contracts": "1.0.0",
           "AOIS2.Core.Domain": "1.0.0",
           "AutoMapper": "10.1.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.9"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.9",
+          "Microsoft.Extensions.Logging": "3.1.9",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.9"
         },
         "compile": {
           "bin/placeholder/AOIS2.Core.dll": {}
